@@ -1,0 +1,85 @@
+/* Centrado de la página */
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #282c34;
+}
+
+/* Estilo del encabezado */
+.heading {
+    color: #61dafb;
+    font-family: 'Arial', sans-serif;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Estilo del contenedor del loader */
+.loader {
+    width: 50px;
+    height: 200px;
+    position: relative;
+    border: 3px solid #61dafb;
+    border-radius: 25px;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Estilo de las burbujas */
+.bubble {
+    position: absolute;
+    bottom: 0;
+    width: 15px;
+    height: 15px;
+    background-color: #61dafb;
+    border-radius: 50%;
+    opacity: 0.7;
+    animation: rise 3s infinite ease-in-out;
+}
+
+/* Animación de las burbujas subiendo */
+@keyframes rise {
+    0% {
+        bottom: 0;
+        opacity: 0.7;
+        transform: translateX(0);
+    }
+    50% {
+        opacity: 1;
+        transform: translateX(10px);
+    }
+    100% {
+        bottom: 200px;
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+}
+
+/* Diferentes tiempos de animación para las burbujas */
+.bubble:nth-child(1) {
+    left: 10px;
+    animation-duration: 2.5s;
+}
+
+.bubble:nth-child(2) {
+    left: 25px;
+    animation-duration: 3s;
+}
+
+.bubble:nth-child(3) {
+    left: 35px;
+    animation-duration: 2.8s;
+}
+
+.bubble:nth-child(4) {
+    left: 15px;
+    animation-duration: 3.2s;
+}
+
+.bubble:nth-child(5) {
+    left: 30px;
+    animation-duration: 2.7s;
+}
